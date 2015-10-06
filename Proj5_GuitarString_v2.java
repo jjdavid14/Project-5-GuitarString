@@ -11,8 +11,6 @@
  * which are going to be stored in an array.
  */
 
-//testing for github
-
 import java.util.Random;
 
 public class Proj5_GuitarString_v2 {
@@ -43,7 +41,7 @@ public class Proj5_GuitarString_v2 {
         StdDraw.setXscale(0,ELEMENTS); //sets scale of width ELEMENT-0
         StdDraw.setYscale(-100,100);   //sets scale of height 100-(100)
         
-        
+        //draw the animation of the oscillation
         while(true) {
             StdDraw.line(0,0,ELEMENTS,0);  //draws line in middle
             
