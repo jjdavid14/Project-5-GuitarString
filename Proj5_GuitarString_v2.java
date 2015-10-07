@@ -1,4 +1,4 @@
-/*Proj5_GuitarString_v2
+/*Proj5_GuitarString_v3
  * 
  * CSc 127A Fall 15, Project 5
  * 
@@ -13,7 +13,7 @@
 
 import java.util.Random;
 
-public class Proj5_GuitarString_v2 {
+public class Proj5_GuitarString_v3 {
     
     public static void main(String[] args) {
         
@@ -61,7 +61,13 @@ public class Proj5_GuitarString_v2 {
             //update height
             for (int l = 1; l < heightString.length - 1; l++) {
                 heightString[l] = 0.999*heightString[l] + velocity[l];
-            } 
+            }
+            
+            //check if mouse is pressed, if so, update height at location
+            if(StdDraw.mousePressed()) {
+                int myVar = (int)(StdDraw.mouseX()+.5);
+                heightString[myVar] = StdDraw.mouseY();
+            }
         }
     }
 }
